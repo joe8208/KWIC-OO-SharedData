@@ -9,15 +9,14 @@ namespace KWIC_OO_SharedData
 {
     public class Input
     {
-        public List<string> Execute()
+        public List<string> Read()
         {
             bool isValidFile = false;
-
+            char[] core;
             Console.Clear();
             Console.Title = "KWIC - OO and Shared Data";
             string filePath = "";
-            List<string> inputFile = new List<string>();
-
+            List<string> inputFile;
             while (!isValidFile)
             {
                 Console.WriteLine("Please enter a valid path of data file:");
@@ -26,6 +25,12 @@ namespace KWIC_OO_SharedData
                 try
                 {
                     inputFile = File.ReadLines(filePath).ToList();
+
+                    foreach (string line in inputFile)
+                    {
+
+                    }
+
                     isValidFile = true;
                 }
                 catch (Exception)
@@ -33,6 +38,8 @@ namespace KWIC_OO_SharedData
                     isValidFile = false;
                 }
             }
+
+            
                         
             return inputFile;
         }
