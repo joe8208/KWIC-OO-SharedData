@@ -9,7 +9,7 @@ namespace KWIC_OO_SharedData
 {
     public class Input
     {
-        public List<string> Read(LineStorage lineStorage)
+        public void Read(LineStorage lineStorage)
         {
             bool isValidFile = false;
             
@@ -45,10 +45,7 @@ namespace KWIC_OO_SharedData
                     isValidFile = false;
                 }
             }
-
             
-                        
-            return inputFile;
         }
     }
 }

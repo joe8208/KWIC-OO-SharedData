@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace KWIC_OO_SharedData
 {
-    class MasterController
+    public class MasterController
     {
+        
 
+        public void Execute()
+        {
+            Input input = new Input();
+            LineStorage lineStorage = new LineStorage();
+
+            input.Read(lineStorage);
+        }
+        
     }
 }

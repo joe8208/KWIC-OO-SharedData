@@ -10,7 +10,8 @@ namespace KWIC_OO_SharedData
     {
         static void Main(string[] args)
         {
-
+            MasterController mc = new MasterController();
+            mc.Execute();
         }
     }
 }
