@@ -16,6 +16,7 @@ namespace KWIC_OO_SharedData
             LineStorage lineStorage = new LineStorage();
 
             input.Read(lineStorage);
+
         }
         
     }

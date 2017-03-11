@@ -31,5 +31,11 @@ namespace KWIC_OO_SharedData
             List<string> currentLine = lines[lineNumber];
             currentLine.Add(word);
         }
+
+        public void addEmptyLine()
+        {
+            List<string> newLine = new List<string>();
+            lines.Add(newLine);
+        }
     }
 }
