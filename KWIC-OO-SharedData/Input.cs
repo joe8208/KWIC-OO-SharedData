@@ -9,10 +9,10 @@ namespace KWIC_OO_SharedData
 {
     public class Input
     {
-        public List<string> Read()
+        public List<string> Read(LineStorage lineStorage)
         {
             bool isValidFile = false;
-            char[] core;
+            
             Console.Clear();
             Console.Title = "KWIC - OO and Shared Data";
             string filePath = "";
@@ -26,9 +26,16 @@ namespace KWIC_OO_SharedData
                 {
                     inputFile = File.ReadLines(filePath).ToList();
 
-                    foreach (string line in inputFile)
+                    for (int i = 0; i < inputFile.Count; i++)
                     {
+                        // grab line and break it up into words
+                        string[] words = inputFile[i].Split(new char[] {' '});
 
+                        for(int j = 0; j < words.Length; j++)
+                        {
+                            // add the words to the LineStorage
+                            lineStorage.addWord(words[j], i);
+                        }
                     }
 
                     isValidFile = true;

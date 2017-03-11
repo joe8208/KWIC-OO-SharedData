@@ -17,6 +17,19 @@ namespace KWIC_OO_SharedData
             string currentWord = currentLine[wordPosition];
             char[] chars = currentWord.ToCharArray();
             chars[charPosition] = c;
+            currentWord = chars.ToString();
+            currentLine[wordPosition] = currentWord;
+        }
+
+        public char getChar(int lineNumber, int wordPosition, int charPosition)
+        {
+            return (lines[lineNumber][wordPosition].ToCharArray())[charPosition];
+        }
+
+        public void addWord(string word, int lineNumber)
+        {
+            List<string> currentLine = lines[lineNumber];
+            currentLine.Add(word);
         }
     }
 }
