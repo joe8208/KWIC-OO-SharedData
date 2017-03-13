@@ -16,6 +16,7 @@ namespace KWIC_OO_SharedData
             Console.Clear();
             Console.Title = "KWIC - OO and Shared Data";
             string filePath = "";
+            
             List<string> inputFile;
             while (!isValidFile)
             {
@@ -28,19 +29,11 @@ namespace KWIC_OO_SharedData
                                        
                     for (int i = 0; i < inputFile.Count; i++)
                     {
-                        // create new empty line to be filled
-                        lineStorage.addEmptyLine();
-
-                        // grab line and break it up into words
-                        string[] words = inputFile[i].Split(new char[] {' '});
-
-                        for (int j = 0; j < words.Length; j++)
-                        {
-                            // add the words to the LineStorage
-                            lineStorage.addWord(words[j], i);
-                        }
+                        // create new empty line to be filled                        
+                        lineStorage.AddLine(inputFile[i]);                        
                     }
-                    
+
+                    lineStorage.SetCharCore();                    
 
                     isValidFile = true;
                 }
@@ -48,8 +41,7 @@ namespace KWIC_OO_SharedData
                 {
                     isValidFile = false;
                 }
-            }
-            
+            }            
             
         }
     }

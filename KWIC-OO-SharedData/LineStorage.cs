@@ -7,35 +7,60 @@ using System.Threading.Tasks;
 namespace KWIC_OO_SharedData
 {
     public class LineStorage
-    {
-        // represents the list of lines for the system
-        List<List<string>> lines = new List<List<string>>();
+    {        
+        char[] charCore;
+        int[] lineIndex;
+        List<int> lineIndices = new List<int>();
+        string lines = "";
+        
+        
 
-        public void setChar(int lineNumber, int wordPosition, int charPosition, char c)
+        public void AddLine(string line)
         {
-            List<string> currentLine = lines[lineNumber];
-            string currentWord = currentLine[wordPosition];
-            char[] chars = currentWord.ToCharArray();
-            chars[charPosition] = c;
-            currentWord = chars.ToString();
-            currentLine[wordPosition] = currentWord;
+            lines += line;
+
+            lineIndices.Add(lines.Length);
         }
 
-        public char getChar(int lineNumber, int wordPosition, int charPosition)
+        /// <summary>
+        /// Sets up the char core with the data from input data
+        /// </summary>
+        public void SetCharCore()
         {
-            return (lines[lineNumber][wordPosition].ToCharArray())[charPosition];
+            charCore = lines.ToCharArray();
+            lineIndex = new int[lineIndices.Count];
+            for(int i = 0; i < lineIndices.Count; i++)
+            {
+                if (i == 0)
+                    lineIndex[i] = 0;
+                else
+                {
+                    // pulling in the index of the location directly behind the prior insert
+                    // so it is the beginning of the next read in line
+                    lineIndex[i] = lineIndices[i - 1];
+                }
+                    
+            }
         }
 
-        public void addWord(string word, int lineNumber)
+        public int GetLineIndexLength()
         {
-            List<string> currentLine = lines[lineNumber];
-            currentLine.Add(word);
+            return lineIndex.Length;
+        }
+        
+        public int GetLineIndex(int i)
+        {
+            return lineIndex[i];
         }
 
-        public void addEmptyLine()
+        public int GetCharCoreLength()
         {
-            List<string> newLine = new List<string>();
-            lines.Add(newLine);
+            return charCore.Length;
+        }
+
+        public char GetChar(int i)
+        {
+            return charCore[i];
         }
     }
 }
