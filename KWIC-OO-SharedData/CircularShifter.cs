@@ -19,14 +19,16 @@ namespace KWIC_OO_SharedData
 
         int[,] circularShifts;
 
-        public void Shift(LineStorage lineStorage)
+        public CircularShifter(LineStorage lineStorage)
         {
             this.lineStorage = lineStorage;
 
             LineIndexLength = lineStorage.GetLineIndexLength();
             CharCoreLength = lineStorage.GetCharCoreLength();
-            
+        }
 
+        public void Shift()
+        {
             for(int i = 0; i < lineStorage.GetLineIndexLength(); i++)
             {
                 wordIndices.Add(lineStorage.GetLineIndex(i));
@@ -79,7 +81,12 @@ namespace KWIC_OO_SharedData
         public string GetWord(int offSet, int count)
         {
             return lineStorage.GetWord(offSet, count);
-        } 
+        }
+
+        public char GetChar(int index)
+        {
+            return lineStorage.GetChar(index);
+        }
 
         public int GetLineIndex(int index)
         {

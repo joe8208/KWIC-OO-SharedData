@@ -10,27 +10,59 @@ namespace KWIC_OO_SharedData
     {
         int[,] alphabetized;
 
-        public void Alphabetize(CircularShifter circularShift)
+        CircularShifter circularShifter;
+
+        public int AlphabetizedLength { get; set; }
+
+        public int LineIndexLength { get; set; }
+
+        public int CharCoreLength { get; set; }
+
+        public Alphabetizer(CircularShifter circularShifter)
         {
-            alphabetized = new int[2, circularShift.GetCircularShiftsLength()];
+            this.circularShifter = circularShifter;
+            LineIndexLength = circularShifter.LineIndexLength;
+            CharCoreLength = circularShifter.CharCoreLength;
+        }
+
+        public int GetAlphabetized(int row, int col)
+        {
+            return alphabetized[row, col];
+        }
+
+        public char GetChar(int index)
+        {
+            return circularShifter.GetChar(index);
+        }
+
+        public int GetLineIndex(int index)
+        {
+            return circularShifter.GetLineIndex(index);
+        }
+
+        
+        public void Alphabetize()
+        {
+            alphabetized = new int[2, circularShifter.GetCircularShiftsLength()];
+            AlphabetizedLength = alphabetized.GetLength(0);
 
             int alphabetizedCount = 0;
             int low, mid, high = 0;
             
             for (int i = 0; i < alphabetized.GetLength(0); i++)
             {
-                int lineCount = circularShift.GetCircularShifts(0, i);
-                int shiftBegin = circularShift.GetCircularShifts(1, i);
+                int lineCount = circularShifter.GetCircularShifts(0, i);
+                int shiftBegin = circularShifter.GetCircularShifts(1, i);
 
-                int lineBegin = circularShift.GetLineIndex(lineCount);
+                int lineBegin = circularShifter.GetLineIndex(lineCount);
                 int lineEnd = 0;
-                if (lineCount == circularShift.LineIndexLength - 1)
+                if (lineCount == circularShifter.LineIndexLength - 1)
                 {
-                    lineEnd = circularShift.CharCoreLength;
+                    lineEnd = circularShifter.CharCoreLength;
                 }
                 else
                 {
-                    lineEnd = circularShift.GetLineIndex(lineCount + 1);
+                    lineEnd = circularShifter.GetLineIndex(lineCount + 1);
                 }
 
 
@@ -38,13 +70,13 @@ namespace KWIC_OO_SharedData
 
                 if (lineBegin != shiftBegin)
                 {
-                    shift += circularShift.GetWord(shiftBegin, lineEnd - shiftBegin);
+                    shift += circularShifter.GetWord(shiftBegin, lineEnd - shiftBegin);
                     shift += " ";
-                    shift += circularShift.GetWord(lineBegin, shiftBegin - lineBegin - 1);
+                    shift += circularShifter.GetWord(lineBegin, shiftBegin - lineBegin - 1);
                 }
                 else
                 {
-                    shift += circularShift.GetWord(lineBegin, lineEnd - lineBegin);
+                    shift += circularShifter.GetWord(lineBegin, lineEnd - lineBegin);
                 }
 
 
@@ -58,28 +90,28 @@ namespace KWIC_OO_SharedData
 
                     int midLineCount = alphabetized[0, mid];
                     int midShiftBegin = alphabetized[1, mid];
-                    int midLineBegin = circularShift.GetLineIndex(midLineCount);
+                    int midLineBegin = circularShifter.GetLineIndex(midLineCount);
                     int midLineEnd = 0;
 
-                    if (midLineCount == circularShift.LineIndexLength - 1)
+                    if (midLineCount == circularShifter.LineIndexLength - 1)
                     {
-                        midLineEnd = circularShift.CharCoreLength;
+                        midLineEnd = circularShifter.CharCoreLength;
                     }
                     else
                     {
-                        midLineEnd = circularShift.GetLineIndex(midLineCount + 1);
+                        midLineEnd = circularShifter.GetLineIndex(midLineCount + 1);
                     }
 
                     string midLine = "";
                     if (midLineBegin != midShiftBegin)
                     {
-                        midLine += circularShift.GetWord(midShiftBegin, midLineEnd - midShiftBegin);
+                        midLine += circularShifter.GetWord(midShiftBegin, midLineEnd - midShiftBegin);
                         midLine += " ";
-                        midLine += circularShift.GetWord(midLineBegin, midShiftBegin - midLineBegin - 1);
+                        midLine += circularShifter.GetWord(midLineBegin, midShiftBegin - midLineBegin - 1);
                     }
                     else
                     {
-                        midLine += circularShift.GetWord(midLineBegin, midLineEnd - midLineBegin);
+                        midLine += circularShifter.GetWord(midLineBegin, midLineEnd - midLineBegin);
                     }
 
                     // comparer
@@ -95,9 +127,13 @@ namespace KWIC_OO_SharedData
                         high = mid - 1;
                     }
 
-                    Array.Copy(alphabetized[0], low, alphabetized[0], low + 1, alphabetizedCount - low);
+                    Array.Copy(alphabetized, low, alphabetized, low + 1, alphabetizedCount - low);
+                    alphabetized[0, low] = lineCount;
+                    alphabetized[1, low] = shiftBegin;
+                    alphabetizedCount++;
                 }
             }
         }
+        
     }
 }

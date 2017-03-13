@@ -13,7 +13,12 @@ namespace KWIC_OO_SharedData
         List<int> lineIndices = new List<int>();
         string lines = "";
         
-                
+        public LineStorage()
+        {
+            lineIndex = new int[0];
+            // initializing charArray
+            charCore = lines.ToCharArray();
+        }
 
         public void AddLine(string line)
         {
@@ -29,6 +34,7 @@ namespace KWIC_OO_SharedData
         {
             charCore = lines.ToCharArray();
             lineIndex = new int[lineIndices.Count];
+
             for(int i = 0; i < lineIndices.Count; i++)
             {
                 if (i == 0)
