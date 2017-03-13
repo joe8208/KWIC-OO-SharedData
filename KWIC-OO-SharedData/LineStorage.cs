@@ -13,7 +13,7 @@ namespace KWIC_OO_SharedData
         List<int> lineIndices = new List<int>();
         string lines = "";
         
-        
+                
 
         public void AddLine(string line)
         {
@@ -53,6 +53,11 @@ namespace KWIC_OO_SharedData
             return lineIndex[i];
         }
 
+        public int[] GetLineIndex()
+        {
+            return lineIndex;
+        }
+
         public int GetCharCoreLength()
         {
             return charCore.Length;
@@ -61,6 +66,11 @@ namespace KWIC_OO_SharedData
         public char GetChar(int i)
         {
             return charCore[i];
+        }
+
+        public string GetWord(int offSet, int count)
+        {
+            return new string(charCore, offSet, count);
         }
     }
 }
