@@ -54,8 +54,7 @@ namespace KWIC_OO_SharedData
                     }
                 }
                 Console.Write('\n');
-            }
-            Console.ReadLine();
+            }            
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace KWIC_OO_SharedData
 {
@@ -16,16 +17,22 @@ namespace KWIC_OO_SharedData
             LineStorage lineStorage = new LineStorage();
             input.Read(lineStorage);
 
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+
             CircularShifter circularShifter = new CircularShifter(lineStorage);
             circularShifter.Shift();
 
             Alphabetizer alphabetizer = new Alphabetizer(circularShifter);
             alphabetizer.Alphabetize();
 
-            Output output = new Output(alphabetizer);      
+            Output output = new Output(alphabetizer);
             
-            
+
             output.Write();
+            sw.Stop();
+            Console.WriteLine(sw.Elapsed.ToString());
+            Console.ReadLine();
         }
         
     }
