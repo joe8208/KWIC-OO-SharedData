@@ -60,11 +60,7 @@ namespace KWIC_OO_SharedData
             return lineIndex[i];
         }
 
-        public int[] GetLineIndex()
-        {
-            return lineIndex;
-        }
-
+      
         public int GetCharCoreLength()
         {
             return charCore.Length;
