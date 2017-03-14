@@ -9,21 +9,24 @@ namespace KWIC_OO_SharedData
 {
     public class MasterController
     {
-        
+        Input input;
+        LineStorage lineStorage;
+        CircularShifter circularShifter;
+        Alphabetizer alphabetizer;
 
         public void Execute()
         {
-            Input input = new Input();
-            LineStorage lineStorage = new LineStorage();
+            input = new Input();
+            lineStorage = new LineStorage();
             input.Read(lineStorage);
 
             Stopwatch sw = new Stopwatch();
             sw.Start();
 
-            CircularShifter circularShifter = new CircularShifter(lineStorage);
+            circularShifter = new CircularShifter(lineStorage);
             circularShifter.Shift();
 
-            Alphabetizer alphabetizer = new Alphabetizer(circularShifter);
+            alphabetizer = new Alphabetizer(circularShifter);
             alphabetizer.Alphabetize();
 
             Output output = new Output(alphabetizer);
