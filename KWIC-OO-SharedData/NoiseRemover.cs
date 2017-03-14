@@ -9,11 +9,26 @@ namespace KWIC_OO_SharedData
 {
     public class NoiseRemover
     {
-        public bool HasNoiseWords(string input)
-        {
-            IEnumerable<string> noiseWordsFile = new List<string>();
+        IEnumerable<string> noiseWordsFile = new List<string>();
 
-            noiseWordsFile = File.ReadLines("noiseword.txt").ToList();
+        
+
+        public NoiseRemover()
+        {
+            try
+            {
+                noiseWordsFile = File.ReadLines("noiseword.txt").ToList();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            
+        }
+
+        public bool HasNoiseWords(string input)
+        {            
 
             // iterate and remove any lines that start with any of the noise words.
             

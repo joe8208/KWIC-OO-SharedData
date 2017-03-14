@@ -9,6 +9,7 @@ namespace KWIC_OO_SharedData
     class Output
     {
         Alphabetizer alpha;
+        NoiseRemover noiseWordChecker;
 
         public Output(Alphabetizer alpha)
         {
@@ -16,6 +17,8 @@ namespace KWIC_OO_SharedData
         }
         public void Write()
         {
+            noiseWordChecker = new NoiseRemover();
+
             for (int i = 0; i < alpha.AlphabetizedLength; i++)
             {
                 int lineCount = alpha.GetAlphabetized(0, i);
@@ -47,8 +50,7 @@ namespace KWIC_OO_SharedData
                 }
 
                 // check for noise words
-                NoiseRemover noiseWordChecker = new NoiseRemover();
-
+                
                 if (!noiseWordChecker.HasNoiseWords(shift))
                 {
                     Console.Write(shift);
