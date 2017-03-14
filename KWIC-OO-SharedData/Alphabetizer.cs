@@ -8,7 +8,7 @@ namespace KWIC_OO_SharedData
 {
     public class Alphabetizer
     {
-        int[,] alphabetized;
+        int[][] alphabetized;
 
         CircularShifter circularShifter;
 
@@ -27,7 +27,7 @@ namespace KWIC_OO_SharedData
 
         public int GetAlphabetized(int row, int col)
         {
-            return alphabetized[row, col];
+            return alphabetized[row][col];
         }
 
         public char GetChar(int index)
@@ -43,13 +43,15 @@ namespace KWIC_OO_SharedData
         
         public void Alphabetize()
         {
-            alphabetized = new int[2, circularShifter.GetCircularShiftsLength()];
-            AlphabetizedLength = alphabetized.GetLength(1);
+            alphabetized = new int[2][];
+            alphabetized[0] = new int[circularShifter.GetCircularShiftsLength()];
+            alphabetized[1] = new int[circularShifter.GetCircularShiftsLength()];
+            AlphabetizedLength = alphabetized[0].Length;
 
             int alphabetizedCount = 0;
             int low, mid, high = 0;
             
-            for (int i = 0; i < alphabetized.GetLength(1); i++)
+            for (int i = 0; i < alphabetized[0].Length; i++)
             {
                 int lineCount = circularShifter.GetCircularShifts(0, i);
                 int shiftBegin = circularShifter.GetCircularShifts(1, i);
@@ -88,8 +90,8 @@ namespace KWIC_OO_SharedData
                 {
                     mid = (low + high) / 2;
 
-                    int midLineCount = alphabetized[0, mid];
-                    int midShiftBegin = alphabetized[1, mid];
+                    int midLineCount = alphabetized[0][mid];
+                    int midShiftBegin = alphabetized[1][mid];
                     int midLineBegin = circularShifter.GetLineIndex(midLineCount);
                     int midLineEnd = 0;
 
@@ -129,9 +131,10 @@ namespace KWIC_OO_SharedData
 
                     
                 }
-                    Array.Copy(alphabetized, low, alphabetized, low + 1, alphabetizedCount - low);
-                    alphabetized[0, low] = lineCount;
-                    alphabetized[1, low] = shiftBegin;
+                    Array.Copy(alphabetized[0], low, alphabetized[0], low + 1, alphabetizedCount - low);
+                    Array.Copy(alphabetized[1], low, alphabetized[1], low + 1, alphabetizedCount - low);
+                    alphabetized[0][low] = lineCount;
+                    alphabetized[1][low] = shiftBegin;
                     alphabetizedCount++;
 
             }
