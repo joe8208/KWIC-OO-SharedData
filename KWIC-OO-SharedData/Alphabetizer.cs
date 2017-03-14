@@ -44,12 +44,12 @@ namespace KWIC_OO_SharedData
         public void Alphabetize()
         {
             alphabetized = new int[2, circularShifter.GetCircularShiftsLength()];
-            AlphabetizedLength = alphabetized.GetLength(0);
+            AlphabetizedLength = alphabetized.GetLength(1);
 
             int alphabetizedCount = 0;
             int low, mid, high = 0;
             
-            for (int i = 0; i < alphabetized.GetLength(0); i++)
+            for (int i = 0; i < alphabetized.GetLength(1); i++)
             {
                 int lineCount = circularShifter.GetCircularShifts(0, i);
                 int shiftBegin = circularShifter.GetCircularShifts(1, i);
@@ -127,11 +127,13 @@ namespace KWIC_OO_SharedData
                         high = mid - 1;
                     }
 
+                    
+                }
                     Array.Copy(alphabetized, low, alphabetized, low + 1, alphabetizedCount - low);
                     alphabetized[0, low] = lineCount;
                     alphabetized[1, low] = shiftBegin;
                     alphabetizedCount++;
-                }
+
             }
         }
         

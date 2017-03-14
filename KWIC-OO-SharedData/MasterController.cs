@@ -14,13 +14,17 @@ namespace KWIC_OO_SharedData
         {
             Input input = new Input();
             LineStorage lineStorage = new LineStorage();
-            CircularShifter circularShifter = new CircularShifter(lineStorage);
-            Alphabetizer alphabetizer = new Alphabetizer(circularShifter);
-            Output output = new Output(alphabetizer);
-
             input.Read(lineStorage);
+
+            CircularShifter circularShifter = new CircularShifter(lineStorage);
             circularShifter.Shift();
+
+            Alphabetizer alphabetizer = new Alphabetizer(circularShifter);
             alphabetizer.Alphabetize();
+
+            Output output = new Output(alphabetizer);      
+            
+            
             output.Write();
         }
         

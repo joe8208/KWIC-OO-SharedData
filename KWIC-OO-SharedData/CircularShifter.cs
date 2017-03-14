@@ -64,7 +64,7 @@ namespace KWIC_OO_SharedData
 
         public int GetCircularShiftsLength()
         {
-            return circularShifts.GetLength(0);
+            return circularShifts.GetLength(1);
         }
 
         /// <summary>

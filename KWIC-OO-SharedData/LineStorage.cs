@@ -34,6 +34,7 @@ namespace KWIC_OO_SharedData
         {
             charCore = lines.ToCharArray();
             lineIndex = new int[lineIndices.Count];
+                      
 
             for(int i = 0; i < lineIndices.Count; i++)
             {
@@ -45,7 +46,7 @@ namespace KWIC_OO_SharedData
                     // so it is the beginning of the next read in line
                     lineIndex[i] = lineIndices[i - 1];
                 }
-                    
+
             }
         }
 
