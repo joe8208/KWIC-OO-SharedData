@@ -32,29 +32,30 @@ namespace KWIC_OO_SharedData
                 {
                     lineEnd = alpha.GetLineIndex(lineCount + 1);
                 }
+                
+                string shift = "";
 
                 if (lineBegin != shiftBegin)
                 {
-                    for (int j = shiftBegin; j < lineEnd; j++)
-                    {
-                        Console.Write(alpha.GetChar(j));
-                    }
-                    Console.Write(' ');
-
-                    for (int j = lineBegin; j < shiftBegin - 1; j++)
-                    {
-                        Console.Write(alpha.GetChar(j));
-                    }
+                    shift += alpha.GetWord(shiftBegin, lineEnd - shiftBegin);
+                    shift += " ";
+                    shift += alpha.GetWord(lineBegin, shiftBegin - lineBegin - 1);
                 }
                 else
                 {
-                    for (int j = lineBegin; j < lineEnd; j++)
-                    {
-                        Console.Write(alpha.GetChar(j));
-                    }
+                    shift += alpha.GetWord(lineBegin, lineEnd - lineBegin);
                 }
-                Console.Write('\n');
-            }            
+
+                // check for noise words
+                NoiseRemover noiseWordChecker = new NoiseRemover();
+
+                if (!noiseWordChecker.HasNoiseWords(shift))
+                {
+                    Console.Write(shift);
+                    Console.Write('\n');
+                }                
+                                
+            }
         }
     }
 }

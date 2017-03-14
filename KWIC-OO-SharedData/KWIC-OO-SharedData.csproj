@@ -48,6 +48,7 @@
     <Compile Include="Input.cs" />
     <Compile Include="LineStorage.cs" />
     <Compile Include="MasterController.cs" />
+    <Compile Include="NoiseRemover.cs" />
     <Compile Include="Output.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

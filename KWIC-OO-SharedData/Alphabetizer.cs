@@ -30,6 +30,11 @@ namespace KWIC_OO_SharedData
             return alphabetized[row][col];
         }
 
+        public string GetWord(int offset, int count)
+        {
+            return circularShifter.GetWord(offset, count);
+        }
+
         public char GetChar(int index)
         {
             return circularShifter.GetChar(index);
