@@ -12,8 +12,7 @@ namespace KWIC_OO_SharedData
         List<int> lineIndices = new List<int>();
 
         public int LineIndexLength { get; set; }
-        public int CharCoreLength { get; set; }
-        
+        public int CharCoreLength { get; set; }        
 
         LineStorage lineStorage;
 
