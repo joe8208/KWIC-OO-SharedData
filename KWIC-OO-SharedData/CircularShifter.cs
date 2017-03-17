@@ -8,6 +8,7 @@ namespace KWIC_OO_SharedData
 {
     public class CircularShifter
     {
+        // member vars
         List<int> wordIndices = new List<int>();
         List<int> lineIndices = new List<int>();
 
