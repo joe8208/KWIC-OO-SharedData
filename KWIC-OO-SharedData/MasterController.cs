@@ -13,23 +13,31 @@ namespace KWIC_OO_SharedData
         LineStorage lineStorage;
         CircularShifter circularShifter;
         Alphabetizer alphabetizer;
+        Output output;
 
         public void Execute()
         {
+            // create and call input
             input = new Input();
             lineStorage = new LineStorage();
             input.Read(lineStorage);
 
+            // start timer to track performance
             Stopwatch sw = new Stopwatch();
             sw.Start();
 
+            // create and call circular shifter
             circularShifter = new CircularShifter(lineStorage);
             circularShifter.Shift();
 
+
+            // create and call Alphabetizer
             alphabetizer = new Alphabetizer(circularShifter);
             alphabetizer.Alphabetize();
 
-            Output output = new Output(alphabetizer);
+
+            // create and call Output
+            output = new Output(alphabetizer);
             
 
             output.Write();
