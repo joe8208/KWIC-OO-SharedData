@@ -41,7 +41,7 @@ namespace KWIC_OO_SharedData
                 {
                     isValidFile = false;
                 }
-            }            
+            }
             
         }
     }

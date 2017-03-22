@@ -10,6 +10,7 @@ namespace KWIC_OO_SharedData
     {
         Alphabetizer alpha;
         NoiseRemover noiseWordChecker;
+        string output = "";
 
         public Output(Alphabetizer alpha)
         {
@@ -53,11 +54,14 @@ namespace KWIC_OO_SharedData
                 
                 if (!noiseWordChecker.HasNoiseWords(shift))
                 {
-                    Console.Write(shift);
-                    Console.Write('\n');
-                }                
+                    output += shift + '\n';
+                    
+                    
+                }           
                                 
             }
+            Console.Write(output);
+
         }
     }
 }
