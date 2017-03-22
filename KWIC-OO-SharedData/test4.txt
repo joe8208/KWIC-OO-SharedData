@@ -1,0 +1,296 @@
+Study Guide for Midterm Exam
+Topics Covered
+OO Basics
+Encapsulation, polymorphism, visibility
+Aggregation vs. Generalization
+cohesion
+coupling
+Three kinds of aggregation
+Different representations of components in UML component diagram
+UML deployment diagram
+Architectural Style
+components, connectors, constraints
+Data Flow Architecture
+Batch sequential
+Data transmitted as a whole between steps
+Pipe-and-filter
+Pipeline
+Bounded pipe
+Typed pipe
+Data Pulling and Pushing
+Advantages/Disadvantages
+Shared Data
+Advantages/Disadvantages
+Object Oriented
+Information hiding
+Relationship between classes in UML
+Polymorphism
+Aggregation vs Generalization
+Kinds of Aggregation
+Component and Deployment Diagrams
+Advantages/Disadvantages
+Client-Server
+Inter-Process Communications
+Sockets
+RPC
+Distributed Object
+Muti-tier C/S
+Advantages/Disadvantages
+Wrapper class
+Peer-to-Peer Architectural Style
+Layered Architecture
+What is a layer?
+Closed Architecture vs Open Architecture
+Advantages/Disadvantages
+Detailed design
+What is detailed design?
+Key tasks in detailed design
+Advantages/Disadvantages
+Design Principles
+The single responsibility principle
+The open-closed principle
+The Liskov Substitution principle
+The interface segregation principle
+Problem Types 
+Short-response questions on concepts as follows (Not exhaustive)
+True/False questions
+Multi-choice questions
+Analysis questions
+The term American Indians is defined by the indigenous peoples of the area that is now known as the United States.
+This means the people were living here for thousands, even millions of years, long before it was conquered and settled.
+Over the last many hundred years, the American Indians have formed tribes, hunted, lived, and prospered on this great land.
+They were overall a peaceful people who enjoyed family, prayer, and creativity.
+An appreciation and respect for nature was of the utmost importance.
+American Indians viewed nature as a gift from the Gods which should be revered and treated properly at all times.
+Although most American Indians claim to have lived on their territory since the beginning of time, some would claim that they migrated here in prehistoric times by way of the Bering Strait Land Bridge.
+Many believe that most came from Siberia. 
+While the American Indians had lived in solitude for much of their lives, when the Europeans came and discovered America, things became less peaceful.
+Indians were suddenly forced off of their land and made to relocate.
+Wars were fought and blood was shed.
+While some Indians eventually sided with the white man, many others refused to surrender to their harsh ways.
+A large number of tribes migrated to the Western part of the country, mostly due to Andrew Jackson's Indian Removal Act of 1830.
+After years and years of struggle, American Indians are finally getting the much deserved respect that they should have received a long time ago.
+Museums have been erected all over the country showing tribute to this great people, and educating the public about their history and rich heritage.
+While the number of American Indians still living today is much fewer than it was centuries ago, their people still remain strong and proud of who they are and what they have become.
+Study Guide for Midterm Exam
+Topics Covered
+OO Basics
+Encapsulation, polymorphism, visibility
+Aggregation vs. Generalization
+cohesion
+coupling
+Three kinds of aggregation
+Different representations of components in UML component diagram
+UML deployment diagram
+Architectural Style
+components, connectors, constraints
+Data Flow Architecture
+Batch sequential
+Data transmitted as a whole between steps
+Pipe-and-filter
+Pipeline
+Bounded pipe
+Typed pipe
+Data Pulling and Pushing
+Advantages/Disadvantages
+Shared Data
+Advantages/Disadvantages
+Object Oriented
+Information hiding
+Relationship between classes in UML
+Polymorphism
+Aggregation vs Generalization
+Kinds of Aggregation
+Component and Deployment Diagrams
+Advantages/Disadvantages
+Client-Server
+Inter-Process Communications
+Sockets
+RPC
+Distributed Object
+Muti-tier C/S
+Advantages/Disadvantages
+Wrapper class
+Peer-to-Peer Architectural Style
+Layered Architecture
+What is a layer?
+Closed Architecture vs Open Architecture
+Advantages/Disadvantages
+Detailed design
+What is detailed design?
+Key tasks in detailed design
+Advantages/Disadvantages
+Design Principles
+The single responsibility principle
+The open-closed principle
+The Liskov Substitution principle
+The interface segregation principle
+Problem Types 
+Short-response questions on concepts as follows (Not exhaustive)
+True/False questions
+Multi-choice questions
+Analysis questions
+The term American Indians is defined by the indigenous peoples of the area that is now known as the United States.
+This means the people were living here for thousands, even millions of years, long before it was conquered and settled.
+Over the last many hundred years, the American Indians have formed tribes, hunted, lived, and prospered on this great land.
+They were overall a peaceful people who enjoyed family, prayer, and creativity.
+An appreciation and respect for nature was of the utmost importance.
+American Indians viewed nature as a gift from the Gods which should be revered and treated properly at all times.
+Although most American Indians claim to have lived on their territory since the beginning of time, some would claim that they migrated here in prehistoric times by way of the Bering Strait Land Bridge.
+Many believe that most came from Siberia. 
+While the American Indians had lived in solitude for much of their lives, when the Europeans came and discovered America, things became less peaceful.
+Indians were suddenly forced off of their land and made to relocate.
+Wars were fought and blood was shed.
+While some Indians eventually sided with the white man, many others refused to surrender to their harsh ways.
+A large number of tribes migrated to the Western part of the country, mostly due to Andrew Jackson's Indian Removal Act of 1830.
+After years and years of struggle, American Indians are finally getting the much deserved respect that they should have received a long time ago.
+Museums have been erected all over the country showing tribute to this great people, and educating the public about their history and rich heritage.
+While the number of American Indians still living today is much fewer than it was centuries ago, their people still remain strong and proud of who they are and what they have become.
+Study Guide for Midterm Exam
+Topics Covered
+OO Basics
+Encapsulation, polymorphism, visibility
+Aggregation vs. Generalization
+cohesion
+coupling
+Three kinds of aggregation
+Different representations of components in UML component diagram
+UML deployment diagram
+Architectural Style
+components, connectors, constraints
+Data Flow Architecture
+Batch sequential
+Data transmitted as a whole between steps
+Pipe-and-filter
+Pipeline
+Bounded pipe
+Typed pipe
+Data Pulling and Pushing
+Advantages/Disadvantages
+Shared Data
+Advantages/Disadvantages
+Object Oriented
+Information hiding
+Relationship between classes in UML
+Polymorphism
+Aggregation vs Generalization
+Kinds of Aggregation
+Component and Deployment Diagrams
+Advantages/Disadvantages
+Client-Server
+Inter-Process Communications
+Sockets
+RPC
+Distributed Object
+Muti-tier C/S
+Advantages/Disadvantages
+Wrapper class
+Peer-to-Peer Architectural Style
+Layered Architecture
+What is a layer?
+Closed Architecture vs Open Architecture
+Advantages/Disadvantages
+Detailed design
+What is detailed design?
+Key tasks in detailed design
+Advantages/Disadvantages
+Design Principles
+The single responsibility principle
+The open-closed principle
+The Liskov Substitution principle
+The interface segregation principle
+Problem Types 
+Short-response questions on concepts as follows (Not exhaustive)
+True/False questions
+Multi-choice questions
+Analysis questions
+The term American Indians is defined by the indigenous peoples of the area that is now known as the United States.
+This means the people were living here for thousands, even millions of years, long before it was conquered and settled.
+Over the last many hundred years, the American Indians have formed tribes, hunted, lived, and prospered on this great land.
+They were overall a peaceful people who enjoyed family, prayer, and creativity.
+An appreciation and respect for nature was of the utmost importance.
+American Indians viewed nature as a gift from the Gods which should be revered and treated properly at all times.
+Although most American Indians claim to have lived on their territory since the beginning of time, some would claim that they migrated here in prehistoric times by way of the Bering Strait Land Bridge.
+Many believe that most came from Siberia. 
+While the American Indians had lived in solitude for much of their lives, when the Europeans came and discovered America, things became less peaceful.
+Indians were suddenly forced off of their land and made to relocate.
+Wars were fought and blood was shed.
+While some Indians eventually sided with the white man, many others refused to surrender to their harsh ways.
+A large number of tribes migrated to the Western part of the country, mostly due to Andrew Jackson's Indian Removal Act of 1830.
+After years and years of struggle, American Indians are finally getting the much deserved respect that they should have received a long time ago.
+Museums have been erected all over the country showing tribute to this great people, and educating the public about their history and rich heritage.
+While the number of American Indians still living today is much fewer than it was centuries ago, their people still remain strong and proud of who they are and what they have become.
+Study Guide for Midterm Exam
+Topics Covered
+OO Basics
+Encapsulation, polymorphism, visibility
+Aggregation vs. Generalization
+cohesion
+coupling
+Three kinds of aggregation
+Different representations of components in UML component diagram
+UML deployment diagram
+Architectural Style
+components, connectors, constraints
+Data Flow Architecture
+Batch sequential
+Data transmitted as a whole between steps
+Pipe-and-filter
+Pipeline
+Bounded pipe
+Typed pipe
+Data Pulling and Pushing
+Advantages/Disadvantages
+Shared Data
+Advantages/Disadvantages
+Object Oriented
+Information hiding
+Relationship between classes in UML
+Polymorphism
+Aggregation vs Generalization
+Kinds of Aggregation
+Component and Deployment Diagrams
+Advantages/Disadvantages
+Client-Server
+Inter-Process Communications
+Sockets
+RPC
+Distributed Object
+Muti-tier C/S
+Advantages/Disadvantages
+Wrapper class
+Peer-to-Peer Architectural Style
+Layered Architecture
+What is a layer?
+Closed Architecture vs Open Architecture
+Advantages/Disadvantages
+Detailed design
+What is detailed design?
+Key tasks in detailed design
+Advantages/Disadvantages
+Design Principles
+The single responsibility principle
+The open-closed principle
+The Liskov Substitution principle
+The interface segregation principle
+Problem Types 
+Short-response questions on concepts as follows (Not exhaustive)
+True/False questions
+Multi-choice questions
+Analysis questions
+The term American Indians is defined by the indigenous peoples of the area that is now known as the United States.
+This means the people were living here for thousands, even millions of years, long before it was conquered and settled.
+Over the last many hundred years, the American Indians have formed tribes, hunted, lived, and prospered on this great land.
+They were overall a peaceful people who enjoyed family, prayer, and creativity.
+An appreciation and respect for nature was of the utmost importance.
+American Indians viewed nature as a gift from the Gods which should be revered and treated properly at all times.
+Although most American Indians claim to have lived on their territory since the beginning of time, some would claim that they migrated here in prehistoric times by way of the Bering Strait Land Bridge.
+Many believe that most came from Siberia. 
+While the American Indians had lived in solitude for much of their lives, when the Europeans came and discovered America, things became less peaceful.
+Indians were suddenly forced off of their land and made to relocate.
+Wars were fought and blood was shed.
+While some Indians eventually sided with the white man, many others refused to surrender to their harsh ways.
+A large number of tribes migrated to the Western part of the country, mostly due to Andrew Jackson's Indian Removal Act of 1830.
+After years and years of struggle, American Indians are finally getting the much deserved respect that they should have received a long time ago.
+Museums have been erected all over the country showing tribute to this great people, and educating the public about their history and rich heritage.
+While the number of American Indians still living today is much fewer than it was centuries ago, their people still remain strong and proud of who they are and what they have become.
